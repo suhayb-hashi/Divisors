@@ -1,0 +1,26 @@
+Author Suhayb Hashi 
+Date 10/8/22
+
+# get input from the user
+user_input = int(input('Enter number:'))
+# declare variable
+count = 0
+# control variable
+play_again = 'y'
+# keep going until the user say no
+while play_again == 'y':
+  # invalidate the user input
+  while user_input < 1:
+    print("Enter in a valid number!")
+    user_input = int(input('Enter number: '))
+  # print the divsors of the user input
+  for number in range(2, user_input):
+    if user_input % number == 0: #display all of the divisors
+      count += 1 
+      print(number)
+      # ask the user if they wanna play again
+  play_again = input('Would you like to enter in another number? (y/n) ')
+  # if yes loop again
+  if play_again == 'y':
+    user_input = int(input('Enter number: '))
+
